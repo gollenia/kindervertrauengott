@@ -63,7 +63,7 @@ main {
   z-index: -1;
 }
 
-.text_listen, .text_watch, .text_read {
+.text_listen, .text_watch, .text_read, .text_easter {
 	position: absolute;
 	animation: zoom-in-out linear forwards;
 	animation-timeline: view();
@@ -80,7 +80,7 @@ main {
 }
 
 .text_listen {
-	top: 47%;
+	top: 37%;
 	left: 20%;
 
 	a {
@@ -100,7 +100,27 @@ main {
 	}
 }
 
-.text_listen a, .text_watch a, .text_read a {
+.text_easter {
+	top: 0%;
+	left: 40%;
+	text-align: right;
+
+	a {
+		display: block;
+		transform: rotateZ(-5deg);
+	}
+}
+
+.hazel {
+	position: absolute;
+    top: -10%;
+    width: 20%;
+    z-index: 5;
+    left: 10%;
+	animation: move-hazel linear forwards;
+}
+
+.text_listen a, .text_watch a, .text_read a, .text_easter a {
 	color: #ffffff;
 	text-shadow: 2px 2px 7px #000000;
 	font-family: "Grandstander";
@@ -213,7 +233,7 @@ main {
 	transform: translateZ(20px) scale(0.81);
 }
 
-.earth::after
+.earth_bottom::after
 {
 	content: "";
 	position: absolute;
@@ -222,7 +242,7 @@ main {
 	width: 100%;
 	height: 2rem;
 	background: #7daee5;
-	
+	z-index: 8;
 	
 }
 
@@ -254,7 +274,7 @@ main {
 
 .house {
 	position: absolute;
-	bottom: 0;
+	bottom: 1rem;
 	left: 0;
 	width: 50%;
 	height: auto;
@@ -283,6 +303,10 @@ main {
 	background-color: #7daee5;
 
 	
+}
+
+.contact-block {
+	background-color: #e57dc1;
 }
 
 .applink {
@@ -326,6 +350,10 @@ a.button {
 
 .watch-block {
 	background-color: #62b44f;
+}
+
+iframe {
+	aspect-ratio: 16 / 9;
 }
 
 h1 {
@@ -385,19 +413,19 @@ button:focus-visible {
 
 
 @media screen and (max-width: 530px) {
-    .text_listen a, .text_watch a, .text_read a {
+    .text_listen a, .text_watch a, .text_read a, .text_easter a {
 		font-size: 1.8em;
 	}
 }
 
 @media screen and (min-width: 530px) {
-	.text_listen a, .text_watch a, .text_read a {
+	.text_listen a, .text_watch a, .text_read a, .text_easter a {
 		font-size: 2.2em;
 	}
 }
 
 @media screen and (min-width: 720px) {
-	.text_listen a, .text_watch a, .text_read a {
+	.text_listen a, .text_watch a, .text_read a, .text_easter a {
 		font-size: 3em;
 	}
 
@@ -413,7 +441,7 @@ button:focus-visible {
 }
 
 @media screen and (min-width: 1000px) {
-	.text_listen a, .text_watch a, .text_read a {
+	.text_listen a, .text_watch a, .text_read a, .text_easter a {
 		font-size: 4em;
 	}
 	.sky {
